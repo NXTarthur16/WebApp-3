@@ -1,0 +1,13 @@
+.button {
+    max-height: 20%;
+    margin: 10px ;
+}
+
+.button input{
+    max-width: 30%;
+}
+
+.novaClasse {
+    font-size: 25px;
+    color: chocolate;
+}

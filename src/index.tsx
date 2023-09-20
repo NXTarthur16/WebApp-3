@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './componentes/app/App';
-import CriacaoCard from './componentes/criacao card/CriacaoCard';
+import './componentes/switch/Switch'
+// import CriacaoCard from './componentes/criacao card/CriacaoCard';
 import reportWebVitals from './reportWebVitals';
+import CardNew from './componentes/switch/Switch';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +15,9 @@ root.render(
     
     {/* <App /> */}
 
-    <CriacaoCard />
+    {/* <CriacaoCard /> */}
+
+    <CardNew />
 
   </React.StrictMode>
 );
