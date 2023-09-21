@@ -27,6 +27,50 @@ function personaInfo() {
     inputComplemento.classList.remove("inputOutline");
     inputNumber.classList.remove("inputOutline");
 
+// switch (true) {
+//     case dadosExibidos:
+//         divDados.innerHTML = "";
+//         break;
+
+//     case botaoNome === "" ||
+//         botaoAge === 0 ||
+//         botaoBairro === "" ||
+//         botaoComplemento === "" ||
+//         botaoNumber === 0:
+//         alert("Por favor, preencha todos os campos.");
+
+//         if (botaoNome === "") {
+//             inputNome.classList.add("inputOutline");
+//         }
+//         if (botaoAge === 0) {
+//             inputAge.classList.add("inputOutline");
+//         }
+//         if (botaoBairro === "") {
+//             inputBairro.classList.add("inputOutline");
+//         }
+//         if (botaoComplemento === "") {
+//             inputComplemento.classList.add("inputOutline");
+//         }
+//         if (botaoNumber === 0) {
+//             inputNumber.classList.add("inputOutline");
+//         }
+//         break;
+
+//     case isNaN(botaoAge) || isNaN(botaoNumber):
+//         alert("Por favor, digite apenas números em idade e telefone");
+//         break;
+
+//     default:
+//         divDados.innerHTML = `
+//         <div class='Dados'>
+//         Seu nome é ${botaoNome}, tem ${botaoAge} anos, mora na ${botaoBairro} com complemento ${botaoComplemento} e o número de telefone é ${botaoNumber}
+//         </div>
+//         `;
+//         dadosExibidos = true;
+//         break;
+// }
+
+
     if (dadosExibidos) {
         divDados.innerHTML = "";
     }
