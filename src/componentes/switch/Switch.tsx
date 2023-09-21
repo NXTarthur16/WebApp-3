@@ -1,61 +1,11 @@
 import React from 'react'
-import './Switch.css'
+import './Switch.css';
+import NumberGuesser from '../../service/numberguesser';
+import TextInput from '../../service/textinput';
+import NumberInput from '../../service/numberinput';
+import personaInfo from '../../service/personainfo';
 
-function NumberGuesser(){
-    var inputTag = (document.getElementById("inputNumber") as HTMLInputElement);
-    var inputValue = Number(inputTag.value)
 
-    if(isNaN(inputValue)){
-        alert("Dibuttogite apenas números");
-    }
-    else if(inputValue > 15){
-        alert("seu número é maior que 15");
-    }else if(inputValue < 15){
-        alert("seu número é menor que 15");
-    }else{
-        alert("seu número é igual a 15");
-    }
-
-    // switch (inputValue){
-    //     case 18:
-    //         alert("vim pelo switch case, número 18");
-    //         break;
-    //     case 19:
-    //         alert("vim pelo switch case, número 19");
-    //         break;
-    //     default:
-    //         break;
-    // }
-
-}
-
-function TextInput(){
-    var inputTexto = (document.getElementById("inputText") as HTMLInputElement);
-    var buttonText = inputTexto.value.toString().toLowerCase();
-
-    var divTag = (document.getElementById("novaMensagem") as HTMLDivElement);
-
-    divTag.innerHTML = `
-        <div class='novaClasse'>
-            O que você escreveu foi ${buttonText}
-        </div>
-    `;
-
-    buttonText === "senac" ? alert("Você está no Senac") : alert("Você não está no Senac");
-}
-
-function NumberInput(){
-    var inputNumber = (document.getElementById("inputNumero") as HTMLInputElement);
-    var buttonNumber = Number(inputNumber.value)
-
-    var divNumber = (document.getElementById("inputNúmero-2") as HTMLDivElement);
-
-    divNumber.innerHTML = `
-    <div class='novaClasse'>
-    Sua idade é ${buttonNumber}
-    </div>
-    `
-}
 
 function CardNew(){
     return(
@@ -72,10 +22,25 @@ function CardNew(){
         <div id='novaMensagem'></div>
         <br/>
         <div className='button-2'>
-            <input type="number" id="inputNumero" />
+            <input type="text" id="inputNome" placeholder='aqui vai seu nome' />
+            <input type="number" id="inputNumero" placeholder='aqui vai sua idade'/>
             <button onClick={NumberInput}>Enviar</button>
         </div>
         <div id='inputNúmero-2'></div>
+       
+        {/*persona info*/}
+        <br/>
+        <br/>
+        <div className='persona'>
+            <input type="text" id="insertNome" placeholder='aqui vai seu nome' />
+            <input type="text" id="insertAge" placeholder='aqui vai sua idade' />
+            <input type="text" id="insertBairro" placeholder='aqui vai seu bairro' />
+            <input type="text" id="insertComplemento" placeholder='aqui vai o complemento' />
+            <input type="text" id="insertNumber" placeholder='aqui vai seu telefone;' />
+            <button onClick={personaInfo}>Enviar</button>
+        </div>
+        <div id='inputDados'></div>
+
         </>
     )
 }

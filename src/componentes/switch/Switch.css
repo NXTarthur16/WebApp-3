@@ -11,3 +11,12 @@
     font-size: 25px;
     color: chocolate;
 }
+
+.Dados {
+    font-size: 15px;
+    color: blue
+}
+
+.inputOutline {
+    outline: red 1px solid;
+}
